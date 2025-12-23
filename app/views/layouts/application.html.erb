@@ -19,11 +19,24 @@
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="bg-white fixed top-0 left-0 w-full h-20 flex items-center justify-between px-5 shadow-md z-10">
+        <a class="text-3xl font-pacifico text-blue-500" href="">Ideator</a>
+        <ul class="flex gap-5">
+          <li><a href="">All ideas</a></li>
+          <li><a href="">Inspire me</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
   </body>
 </html>
