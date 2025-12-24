@@ -17,6 +17,9 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
@@ -25,18 +28,12 @@
   </head>
 
   <body>
-    <header>
-      <div class="bg-white fixed top-0 left-0 w-full h-20 flex items-center justify-between px-5 shadow-md z-10">
-        <a class="text-3xl font-pacifico text-blue-500" href="">Ideator</a>
-        <ul class="flex gap-5">
-          <li><a href="">All ideas</a></li>
-          <li><a href="">Inspire me</a></li>
-          <li><a href="">About</a></li>
-        </ul>
-      </div>
-    </header>
+    <%= render 'shared/nav' %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
+
+    <%= render 'shared/footer' %>
+
   </body>
 </html>

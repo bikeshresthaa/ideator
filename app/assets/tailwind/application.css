@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 
 @import "tailwindcss";
 
-@layer base {
-   .font-pacifico{
-    font-family: 'Pacifico', cursive;
-  }
+@theme {
+    --font-open-sans: "Open Sans", "sans-serif";
+    --font-pacifico: "Pacifico", "sans-serif";
+    --font-dosis: "Dosis", "sans-serif";
+    --color-primary-500: #337ab7;
 }
