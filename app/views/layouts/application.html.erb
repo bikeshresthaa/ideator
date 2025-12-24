@@ -29,7 +29,8 @@
 
   <body>
     <%= render 'shared/nav' %>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-18 px-5 flex flex-col align-items-center">
+      <%= render 'shared/flash_messages' %>
       <%= yield %>
     </main>
 

@@ -1,14 +1,14 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.all
+    @pagy, @ideas = pagy(Idea.order("created_at DESC"))
   end
 
   def create
     @idea = Idea.create(idea_params)
     if @idea.valid?
-      # do something
+      flash[:success] = "Idea posted successfully!"
     else
-      # do something else
+      flash[:alert] = "Woops! Looks like something went wrong."
     end
     redirect_to root_path
   end
@@ -20,8 +20,10 @@ class IdeasController < ApplicationController
   def update
     @idea = Idea.find(params[:id])
     if @idea.update(idea_params)
+      flash[:success] = "The idea was updated successfully!"
       redirect_to root_path
     else
+      flash[:alert] = "Woops! Looks like something went wrong."
       redirect_to edit_idea_path(params[:id])
     end
   end
@@ -29,6 +31,7 @@ class IdeasController < ApplicationController
   def destroy
     @idea = Idea.find(params[:id])
     @idea.destroy
+    flash[:success] = "The idea was deleted successfully!"
     redirect_to root_path
   end
 

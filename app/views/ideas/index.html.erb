@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<div class="max-w-screen-xl mx-auto">
+<div class="max-w-screen-xl mx-auto flex flex-wrap gap-6 mt-6 md:mt-10 md:flex-nowrap md:justify-start md:gap-8">
   <% @ideas.each do |idea| %>
     <div class="rounded overflow-hidden shadow-lg">
       <div class="px-6 py-8 h-full">
@@ -42,4 +42,7 @@
       </div>
     </div>
   <% end %>
+</div>
+<div class="mt-5 flex justify-center">
+  <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
 </div>
