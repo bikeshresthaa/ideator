@@ -1,6 +1,6 @@
 
 @import "tailwindcss";
-@import "tailwindcss/base";
+@tailwind base;
 
 @theme {
     --font-open-sans: "Open Sans", "sans-serif";
