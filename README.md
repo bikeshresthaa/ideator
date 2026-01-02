@@ -1,24 +1,10 @@
-# README
+# Ideator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ideator is a simple and intuitive Rails application designed to let users share, explore, and manage ideas. Users can post ideas, edit or delete their own ideas, browse all ideas, view a random idea, and read about the platform.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Post new ideas
+- Edit or delete existing ideas
+- Browse all ideas
+- View a random idea
